@@ -1,0 +1,8 @@
+parm sak42D_crystalwaters.pdb.prmtop
+trajin sak42d_3.nc
+strip !:1-136
+center :1-136 mass origin
+image origin center familiar
+trajout stripped.pdb onlyframes 1
+trajout stripped.nc
+go

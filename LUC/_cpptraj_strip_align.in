@@ -1,0 +1,18 @@
+### To combine and align MDs using cpptraj
+#
+# Add module in MEtacenter: module add amber-16
+# Run as: cpptraj < _cpptraj_strip_align.in
+#
+parm ./filtered_aligned/filtered.pdb
+trajin ./filtered_aligned/e?s*/*xtc
+trajin ./filtered_aligned/e??s*/*xtc
+
+strip :SOD,CLA,TIP3W
+
+center @CA mass origin
+autoimage
+reference filtered.pdb
+rmsd reference @CA perres perresavg perresavg.txt
+trajout filtered.ALL.xtc
+atomicfluct out bfactors_backbone_new.out @CA,C,N,O byres bfactor
+go
