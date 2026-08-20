@@ -65,4 +65,5 @@ For questions or further information, please contact:
 
 **Faraneh Haddadi**
 Loschmidt Laboratories, Masaryk University
-Email: [faraneh.haddadi@ceitec.muni.cz](mailto:faraneh.haddadi@ceitec.muni.cz)
+Email: [faranehhaddadi@gmail.com](mailto:faranehhaddadi@gmail.com)
+
