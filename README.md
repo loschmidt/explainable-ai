@@ -6,13 +6,7 @@
 * **Zenodo repository:** https://zenodo.org/records/21872520
 * **Loschmidt Laboratories:** https://loschmidt.chemi.muni.cz/
 
-This repository contains the code and implementation for three case studies using the **ProtXAI pipeline** for the analysis of molecular dynamics (MD) data. The framework combines machine learning and explainable AI (XAI) to identify structural determinants of protein dynamics.
-
-The three case studies are:
-
-* **ApoE4** – CNN-based classification using residue–residue distance-difference features.
-* **SAK** – CNN-based classification of four SAK variants using distance-difference features.
-* **Luciferase** – next-snapshot prediction using a convolutional autoencoder and Cα coordinates.
+The repository contains the code and implementation for three case studies using the **ProtXAI pipeline** for the analysis of molecular dynamics (MD) data. The framework combines machine learning and explainable AI (XAI) to identify structural determinants of protein dynamics.
 
 ## Requirements
 
@@ -25,45 +19,43 @@ The analyses are implemented in Python and use libraries including:
 * TensorFlow / Keras
 * PyEMMA
 * MDTraj
-* Matplotlib
 * BioPython
-* **iNNvestigate**
+* Matplotlib
+* **iNNvestigate** for explainable AI and Layer-wise Relevance Propagation (LRP)
+* Seaborn
 
 Some preprocessing steps additionally require **cpptraj**.
 
-Please refer to the README files in the individual case-study directories for more details.
+For information about iNNvestigate and installation, see the [iNNvestigate repository](https://github.com/albermax/innvestigate).
 
 ## Case studies
 
 ### ApoE4
 
-The ApoE4 case study uses a CNN to distinguish ApoE4 from ApoE4 + 3-SPA based on residue–residue distance-difference features. Layer-wise Relevance Propagation (LRP) is used to identify important residue interactions.
+CNN-based classification of ApoE4 and ApoE4 + 3-SPA using residue–residue distance-difference features, followed by LRP analysis.
 
 **Main file:** [`Clean code_ApoE4.py`](./ApoE4/Clean%20code_ApoE4.py)
 
-For detailed information, see the [`ApoE4/README.md`](./ApoE4/README.md).
+See [`ApoE4/README.md`](./ApoE4/README.md) for details.
 
 ### SAK
 
-The SAK case study analyzes four SAK variants using CNN classification based on residue–residue distance-difference features. LRP is used to identify relevant structural interactions.
+CNN-based classification of four SAK variants using residue–residue distance-difference features, followed by LRP analysis.
 
 **Main file:** [`SAK_clean code.py`](./SAK/SAK_clean%20code.py)
 
-For detailed information, see the [`SAK/README.md`](./SAK/README.md).
+See [`SAK/README.md`](./SAK/README.md) for details.
 
 ### Luciferase
 
-The Luciferase case study uses a convolutional autoencoder to predict the next molecular-dynamics snapshot from the current snapshot using Cα coordinates. LRP is used to identify residues associated with the learned protein dynamics.
+Convolutional autoencoder for next-snapshot prediction using Cα coordinates, followed by LRP analysis of the learned protein dynamics.
 
 **Main file:** [`Clean_anc.py`](./LUC/Clean_anc.py)
 
-For detailed information, see the [`LUC/README.md`](./LUC/README.md).
+See [`LUC/README.md`](./LUC/README.md) for details.
 
 ## Contact
-
-For questions or further information, please contact:
 
 **Faraneh Haddadi**
 Loschmidt Laboratories, Masaryk University
 Email: [faranehhaddadi@gmail.com](mailto:faranehhaddadi@gmail.com)
-
